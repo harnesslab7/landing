@@ -2,6 +2,13 @@
 
 Landing page for /workspace. Next.js 15 (App Router), TypeScript, plain CSS, no UI library.
 
+## Languages
+
+English, Spanish and Portuguese, served at `/en`, `/es` and `/pt`. The middleware
+redirects `/` using the `NEXT_LOCALE` cookie first, then the browser's
+`Accept-Language`, falling back to English. The footer switcher stores the manual
+choice in that cookie. All copy lives in `lib/dictionaries.ts`.
+
 ## Run locally
 
 ```bash
