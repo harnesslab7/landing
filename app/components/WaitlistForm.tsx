@@ -50,15 +50,15 @@ export default function WaitlistForm({
 
   if (status === "ok") {
     return (
-      <div className="form col">
-        <p className="form-ok">{t.ok}</p>
+      <div className="wl-form">
+        <p className="wl-ok">{t.ok}</p>
       </div>
     );
   }
 
   return (
-    <form className="form col" onSubmit={onSubmit}>
-      <div className="field col">
+    <form className="wl-form" onSubmit={onSubmit}>
+      <div className="wl-field">
         <label htmlFor="wl-email">{t.email}</label>
         <input
           id="wl-email"
@@ -67,10 +67,10 @@ export default function WaitlistForm({
           required
           autoComplete="email"
           placeholder={t.emailPlaceholder}
-          className="input"
+          className="wl-input"
         />
       </div>
-      <div className="field col">
+      <div className="wl-field">
         <label htmlFor="wl-team">{t.team}</label>
         <input
           id="wl-team"
@@ -78,12 +78,12 @@ export default function WaitlistForm({
           type="number"
           min={1}
           placeholder="5"
-          className="input"
+          className="wl-input"
         />
       </div>
       <fieldset>
         <legend>{t.legend}</legend>
-        <div className="checks row">
+        <div className="wl-checks">
           <label htmlFor="wl-claude">
             <input id="wl-claude" name="tools" type="checkbox" value="claude" /> Claude
           </label>
@@ -103,11 +103,11 @@ export default function WaitlistForm({
         <label htmlFor="wl-website">Website</label>
         <input id="wl-website" name="website" type="text" tabIndex={-1} autoComplete="off" />
       </div>
-      <button type="submit" className="btn btn-primary" disabled={status === "sending"}>
+      <button type="submit" className="btn-accent" disabled={status === "sending"}>
         {status === "sending" ? t.sending : t.submit}
       </button>
-      {status === "error" && <p className="form-err" role="alert">{error}</p>}
-      <p className="form-note">{t.note}</p>
+      {status === "error" && <p className="wl-err" role="alert">{error}</p>}
+      <p className="wl-note">{t.note}</p>
     </form>
   );
 }

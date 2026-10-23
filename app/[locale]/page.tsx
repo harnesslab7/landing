@@ -1,15 +1,180 @@
 import { notFound } from "next/navigation";
 import LanguageSwitcher from "../components/LanguageSwitcher";
+import SyncDemo from "../components/SyncDemo";
 import WaitlistForm from "../components/WaitlistForm";
-import { getDictionary } from "../../lib/dictionaries";
+import { FileIcon, FolderIcon, RouteIcon } from "../components/icons";
+import { getDictionary, type Dict } from "../../lib/dictionaries";
 import { isLocale } from "../../lib/i18n";
 
-function Wordmark({ size = 20 }: { size?: number }) {
+function Eyebrow({
+  children,
+  variant,
+}: {
+  children: React.ReactNode;
+  variant?: "dark" | "wa";
+}) {
+  const cls =
+    variant === "dark"
+      ? "eyebrow eyebrow--dark"
+      : variant === "wa"
+        ? "eyebrow eyebrow--wa"
+        : "eyebrow";
   return (
-    <span className="wordmark" style={{ fontSize: size }}>
-      <span>/</span>
-      <span>workspace</span>
-    </span>
+    <p className={cls}>
+      <span className="slash" aria-hidden="true">
+        /
+      </span>
+      {children}
+    </p>
+  );
+}
+
+function Diagram({ t }: { t: Dict["overview"] }) {
+  return (
+    <svg
+      className="dg"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 520"
+      role="img"
+      aria-label={t.diagramAria}
+    >
+      <defs>
+        <marker
+          id="fa"
+          markerWidth="7"
+          markerHeight="7"
+          refX="5"
+          refY="3.5"
+          orient="auto-start-reverse"
+          markerUnits="userSpaceOnUse"
+        >
+          <path className="arrow" d="M1 1L5 3.5L1 6" />
+        </marker>
+      </defs>
+      <text className="lbl" x="0" y="22">
+        {t.lblShares}
+      </text>
+      <text className="lbl" x="950" y="62">
+        {t.lblTools}
+      </text>
+      <g className="connector" markerStart="url(#fa)" markerEnd="url(#fa)">
+        <path d="M272 72H305C365 72 325 168 390 168H448" />
+        <path d="M272 152H305C365 152 325 184 390 184H448" />
+        <path d="M272 232H305C365 232 325 200 390 200H448" />
+        <path d="M272 312H305C365 312 325 216 390 216H448" />
+        <path d="M752 176H794C867 176 844 112 914 112H948" />
+        <path d="M752 192H948" />
+        <path d="M752 208H794C867 208 844 272 914 272H948" />
+      </g>
+      <g className="connector" markerStart="url(#fa)">
+        <path d="M600 246V400" />
+      </g>
+      <g className="connector">
+        <path d="M360 400H840" />
+      </g>
+      <g className="connector" markerEnd="url(#fa)">
+        <path d="M360 400V450" />
+        <path d="M600 400V450" />
+        <path d="M840 400V450" />
+      </g>
+
+      <rect className="node" x="0" y="40" width="270" height="64" rx="6" />
+      <rect className="node" x="0" y="120" width="270" height="64" rx="6" />
+      <rect className="node" x="0" y="200" width="270" height="64" rx="6" />
+      <rect className="node" x="0" y="280" width="270" height="64" rx="6" />
+      <g className="dgic" transform="translate(20 52) scale(1.667)">
+        <path d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2" />
+      </g>
+      <g className="dgic" transform="translate(20 132) scale(1.667)">
+        <path d="M4 6l16 0" />
+        <path d="M4 12l10 0" />
+        <path d="M4 18l6 0" />
+        <path d="M15 16l3 3l4 -5" />
+      </g>
+      <g className="dgic" transform="translate(20 212) scale(1.667)">
+        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+        <path d="M12 7v5l3 3" />
+      </g>
+      <g className="dgic" transform="translate(20 292) scale(1.667)">
+        <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+        <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+      </g>
+      <text x="76" y="80">
+        {t.nodeDrive}
+      </text>
+      <text x="76" y="160">
+        {t.nodeWorkflows}
+      </text>
+      <text x="76" y="240">
+        {t.nodeScheduled}
+      </text>
+      <text x="76" y="320">
+        {t.nodeExperts}
+      </text>
+
+      <rect className="node" x="450" y="140" width="300" height="104" rx="7" />
+      <text className="bslash" x="489" y="212">
+        /
+      </text>
+      <text className="brand" x="520" y="204">
+        workspace
+      </text>
+
+      <rect className="node" x="950" y="80" width="250" height="64" rx="6" />
+      <rect className="node" x="950" y="160" width="250" height="64" rx="6" />
+      <rect className="node" x="950" y="240" width="250" height="64" rx="6" />
+      <circle className="dot" cx="978" cy="112" r="6" />
+      <circle className="dot" cx="978" cy="192" r="6" />
+      <circle className="dot" cx="978" cy="272" r="6" />
+      <text x="998" y="120">
+        Claude
+      </text>
+      <text x="998" y="200">
+        ChatGPT
+      </text>
+      <text x="998" y="280">
+        Gemini
+      </text>
+      <text className="inv" x="1182" y="119" textAnchor="end">
+        /ws
+      </text>
+      <text className="inv" x="1182" y="199" textAnchor="end">
+        @ws
+      </text>
+      <text className="inv" x="1182" y="279" textAnchor="end">
+        @ws
+      </text>
+
+      <text className="lbl" x="614" y="330">
+        {t.lblIntegrations}
+      </text>
+      <rect className="node" x="250" y="452" width="220" height="64" rx="6" />
+      <rect className="node" x="490" y="452" width="220" height="64" rx="6" />
+      <rect className="node" x="730" y="452" width="220" height="64" rx="6" />
+      <g transform="translate(268 465) scale(1.3)" style={{ fill: "#F3F6F1" }}>
+        <path d="M30.31 14.32A14.87 14.87 0 0 0 15.54 0h-.07A14.87 14.87 0 0 0 2.41 22L1.1 29.87a.11.11 0 0 0 .11.13h.02l7.79-1.73c2 .96 4.2 1.47 6.44 1.46h.42a14.86 14.86 0 0 0 14.43-15.4Zm-14.5 12.83h-.35a12.3 12.3 0 0 1-5.67-1.38l-.4-.2-5.27 1.24.97-5.34-.22-.38a12.3 12.3 0 0 1 10.25-18.5h.36a12.29 12.29 0 0 1 .34 24.56h-.01Z" />
+        <path d="M10.29 7.69a1.37 1.37 0 0 0-.98.44c-.35.36-1.34 1.23-1.4 3.07-.06 1.84 1.23 3.65 1.4 3.9.18.26 2.46 4.23 6.2 5.84 2.2.95 3.170 1.11 3.8 1.11.25 0 .45-.03.65-.04.69-.04 2.24-.83 2.57-1.7.34-.86.36-1.61.28-1.76-.1-.15-.34-.26-.7-.46-.37-.19-2.18-1.150-2.52-1.29a.91.91 0 0 0-.4-.1.55.55 0 0 0-.44.26c-.3.38-1 1.2-1.230 1.43a.55.55 0 0 1-.4.19.97.97 0 0 1-.41-.11 9.52 9.52 0 0 1-2.94-1.96c-.8-.78-1.47-1.68-2-2.66-.2-.38 0-.57.19-.75.19-.18.39-.42.58-.64.16-.18.29-.38.4-.6a.69.69 0 0 0-.02-.66c-.09-.19-.75-2.05-1.07-2.8-.25-.64-.55-.66-.81-.68a8.15 8.15 0 0 0-.72-.03h-.03" />
+      </g>
+      <g className="dgic" transform="translate(508 464) scale(1.667)">
+        <path d="M5 9l14 0" />
+        <path d="M5 15l14 0" />
+        <path d="M11 4l-4 16" />
+        <path d="M17 4l-4 16" />
+      </g>
+      <g className="dgic" transform="translate(748 464) scale(1.667)">
+        <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z" />
+        <path d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+      </g>
+      <text x="320" y="492">
+        {t.integrations[0]}
+      </text>
+      <text x="560" y="492">
+        {t.integrations[1]}
+      </text>
+      <text x="800" y="492">
+        {t.integrations[2]}
+      </text>
+    </svg>
   );
 }
 
@@ -24,137 +189,192 @@ export default async function Page({
 
   return (
     <>
-      <header className="nav-bar">
-        <nav className="wrap row nav" aria-label="Main">
-          <a href="#top">
-            <Wordmark />
-          </a>
-          <div className="row nav-links">
-            <a href="#how">{t.nav.how}</a>
-            <a href="#whatsapp">{t.nav.whatsapp}</a>
-            <a href="#pricing">{t.nav.pricing}</a>
-            <a href="#about">{t.nav.about}</a>
-            <a href="#waitlist" className="btn btn-primary btn-sm">
-              {t.nav.cta}
+      {/* Masthead + hero, dark */}
+      <section id="top" className="hero-dark">
+        <div className="band band--hero" aria-hidden="true" />
+
+        <header className="masthead">
+          <nav className="wrap nav" aria-label="Main">
+            <a href="#top" className="wm">
+              <span className="slash">/</span>workspace
             </a>
-          </div>
-        </nav>
-      </header>
-
-      <main id="top">
-        {/* Hero */}
-        <section>
-          <div className="wrap row hero">
-            <div className="col hero-copy">
-              <h1>{t.hero.h1}</h1>
-              <p className="hero-sub">{t.hero.sub}</p>
-              <div className="row" style={{ gap: 12, paddingTop: 8 }}>
-                <a href="#waitlist" className="btn btn-primary">
-                  {t.hero.cta}
-                </a>
-                <a href="#how" className="btn btn-ghost">
-                  {t.hero.see}
-                </a>
-              </div>
-              <p className="hero-note">{t.hero.note}</p>
+            <div className="nav-links">
+              <a href="#shares">{t.nav.shares}</a>
+              <a href="#how">{t.nav.how}</a>
+              <a href="#whatsapp">{t.nav.whatsapp}</a>
+              <a href="#about">{t.nav.about}</a>
+              <a href="#waitlist" className="nav-cta">
+                {t.nav.cta}
+              </a>
             </div>
+          </nav>
+        </header>
 
-            <div className="col chat" aria-label={t.hero.chatAria}>
-              <div className="chat-label">
-                <span className="dot" aria-hidden="true" />
-                <span>{t.hero.chatLabel}</span>
-              </div>
-              <div className="bubble-user">{t.hero.bubbleUser}</div>
-              <div className="col bubble-ai">
-                <p dangerouslySetInnerHTML={{ __html: t.hero.bubbleAi1Html }} />
-                <p>{t.hero.bubbleAi2}</p>
-              </div>
-              <div className="row chips">
-                {t.hero.chips.map((chip) => (
-                  <span key={chip} className="chip">
-                    {chip}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+        <div className="wrap hero">
+          <Eyebrow variant="dark">{t.hero.kicker}</Eyebrow>
+          <h1>
+            <span>{t.hero.h1Line1}</span>
+            <span>{t.hero.h1Line2}</span>
+            <span className="accent">{t.hero.h1Accent}</span>
+          </h1>
 
-        {/* The idea */}
-        <section className="idea">
-          <div className="wrap row">
-            <div className="col idea-head">
-              <p className="eyebrow">{t.idea.eyebrow}</p>
-              <h2 className="h2">{t.idea.h2}</h2>
+          <ul className="hero-pills" aria-label={t.hero.toolsAria}>
+            <li>
+              <img src="/logos/claude.svg" alt="" />
+              Claude
+            </li>
+            <li>
+              <img src="/logos/chatgpt.svg" alt="" />
+              ChatGPT
+            </li>
+            <li>
+              <img src="/logos/gemini.svg" alt="" />
+              Gemini
+            </li>
+          </ul>
+
+          <div className="hero-bottom">
+            <div className="hero-lead">
+              <p className="big">{t.hero.lead}</p>
+              <p className="sub">{t.hero.sub}</p>
             </div>
-            <div className="col idea-body">
-              <p>{t.idea.p1}</p>
-              <p>{t.idea.p2}</p>
-              <p className="strong">{t.idea.strong}</p>
+            <div className="hero-cta">
+              <a href="#waitlist" className="btn-accent">
+                {t.hero.cta}
+              </a>
+              <p className="note">{t.hero.note}</p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* What the team shares */}
-        <section className="shares">
-          <div className="wrap col">
-            <div className="col section-head">
-              <p className="eyebrow">{t.shares.eyebrow}</p>
-              <h2 className="h2">{t.shares.h2}</h2>
-            </div>
-            <div className="row cards">
-              {t.shares.cards.map((card) => (
-                <div key={card.title} className="col card">
-                  <h3>{card.title}</h3>
-                  <p>{card.body}</p>
+      <main>
+        <div className="wrap body-wrap">
+          {/* Everything your team knows */}
+          <section id="shares" className="shares">
+            <Eyebrow>{t.shares.eyebrow}</Eyebrow>
+            <h2 className="h2">
+              {t.shares.h2Line1}
+              <br />
+              {t.shares.h2Line2}
+            </h2>
+            <p className="section-lead">{t.shares.lead}</p>
+
+            <div className="cards">
+              {/* Your drive */}
+              <article className="card">
+                <div className="card-art">
+                  <div className="card-band" aria-hidden="true" />
+                  <p className="card-label">{t.shares.drive.label}</p>
+                  <p className="card-row">
+                    <FileIcon />
+                    {t.shares.drive.files[0]}
+                  </p>
+                  <p className="card-row">
+                    <FolderIcon />
+                    {t.shares.drive.files[1]}
+                  </p>
+                  <p className="card-row">
+                    <FileIcon />
+                    {t.shares.drive.files[2]}
+                  </p>
                 </div>
-              ))}
-            </div>
-            <div className="row cards">
-              {t.shares.wide.map((card) => (
-                <div key={card.title} className="col card card-wide">
-                  <h3>{card.title}</h3>
-                  <p>{card.body}</p>
+                <div className="card-text">
+                  <h3>{t.shares.drive.title}</h3>
+                  <p>{t.shares.drive.body}</p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              </article>
 
-        {/* How it works */}
-        <section id="how" className="how">
-          <div className="wrap col">
-            <div className="col section-head">
-              <p className="eyebrow">{t.how.eyebrow}</p>
-              <h2 className="h2">{t.how.h2}</h2>
-            </div>
-            <div className="row steps">
-              {t.how.steps.map((step, i) => (
-                <div key={step.titleHtml} className="col step">
-                  <span className="step-n" aria-hidden="true">
-                    {i + 1}
-                  </span>
-                  <h3 dangerouslySetInnerHTML={{ __html: step.titleHtml }} />
-                  <p dangerouslySetInnerHTML={{ __html: step.bodyHtml }} />
+              {/* Workflows */}
+              <article className="card">
+                <div className="card-art card-art--wf">
+                  <div className="card-band" aria-hidden="true" />
+                  <p className="card-label">{t.shares.workflows.label}</p>
+                  {t.shares.workflows.items.map((item) => (
+                    <p key={item.name} className="card-row">
+                      <RouteIcon />
+                      <span className="grow">{item.name}</span>
+                      <span className="meta">{item.steps}</span>
+                    </p>
+                  ))}
                 </div>
-              ))}
-            </div>
-            <div className="row works">
-              <span className="label">{t.how.worksLabel}</span>
-              {t.how.works.map((name) => (
-                <span key={name} className="name">
-                  {name}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
+                <div className="card-text">
+                  <h3>{t.shares.workflows.title}</h3>
+                  <p>{t.shares.workflows.body}</p>
+                </div>
+              </article>
 
-        {/* WhatsApp */}
+              {/* Scheduled tasks */}
+              <article className="card">
+                <div className="card-art card-art--row">
+                  <div className="card-band" aria-hidden="true" />
+                  <div className="cal" aria-hidden="true">
+                    <span className="cal-badge">{t.shares.scheduled.calBadge}</span>
+                    <span className="cal-day">{t.shares.scheduled.calDay}</span>
+                  </div>
+                  <div className="sched-info">
+                    <p className="name">{t.shares.scheduled.taskName}</p>
+                    <p className="desc">{t.shares.scheduled.taskDesc}</p>
+                    <p className="target">{t.shares.scheduled.taskTarget}</p>
+                  </div>
+                </div>
+                <div className="card-text">
+                  <h3>{t.shares.scheduled.title}</h3>
+                  <p>{t.shares.scheduled.body}</p>
+                </div>
+              </article>
+
+              {/* Experts */}
+              <article className="card">
+                <div className="card-art">
+                  <div className="card-band" aria-hidden="true" />
+                  <p className="card-label">{t.shares.experts.label}</p>
+                  {t.shares.experts.items.map((item, i) => (
+                    <p
+                      key={item.name}
+                      className={i === 0 ? "expert expert--active" : "expert"}
+                    >
+                      <span className="avatar" aria-hidden="true">
+                        {item.initial}
+                      </span>
+                      {item.name}
+                    </p>
+                  ))}
+                </div>
+                <div className="card-text">
+                  <h3>{t.shares.experts.title}</h3>
+                  <p>{t.shares.experts.body}</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          {/* How it works: live demo */}
+          <section id="how" className="how">
+            <Eyebrow>{t.how.eyebrow}</Eyebrow>
+            <h2 className="h2">
+              {t.how.h2Line1}
+              <br />
+              {t.how.h2Line2}
+            </h2>
+            <p className="section-lead">{t.how.lead}</p>
+            <SyncDemo t={t.how} />
+          </section>
+        </div>
+
+        {/* WhatsApp integration */}
         <section id="whatsapp" className="wa">
-          <div className="wrap row">
-            <div className="col wa-copy">
-              <p className="wa-label">{t.wa.label}</p>
+          <div className="wrap">
+            <div className="wa-copy">
+              <div className="wa-logos">
+                <img src="/logos/whatsapp.svg" alt="" className="iso" />
+                <img
+                  src="/logos/whatsapp-wordmark.svg"
+                  alt="WhatsApp"
+                  className="word"
+                />
+              </div>
+              <Eyebrow variant="wa">{t.wa.label}</Eyebrow>
               <h2 className="h2">{t.wa.h2}</h2>
               <p
                 className="lead"
@@ -162,35 +382,37 @@ export default async function Page({
               />
             </div>
 
-            <div className="col wa-phone" aria-label={t.wa.phoneAria}>
+            <div className="wa-phone" aria-label={t.wa.phoneAria}>
               <div className="wa-head">
-                <span className="wa-avatar" aria-hidden="true">CA</span>
-                <div className="col" style={{ gap: 1, minWidth: 0 }}>
+                <span className="wa-avatar" aria-hidden="true">
+                  CA
+                </span>
+                <div style={{ display: "flex", flexDirection: "column", gap: 1, minWidth: 0 }}>
                   <span className="wa-title">{t.wa.title}</span>
                   <span className="wa-members">{t.wa.members}</span>
                 </div>
               </div>
-              <div className="col wa-thread">
-                <div className="col wa-msg wa-in">
+              <div className="wa-thread">
+                <div className="wa-msg wa-in">
                   <span className="wa-name person">Andres</span>
                   <span>{t.wa.msg1}</span>
                   <span className="wa-time">10:12</span>
                 </div>
-                <div className="col wa-msg wa-out">
+                <div className="wa-msg wa-out">
                   <span>{t.wa.msg2}</span>
                   <span className="wa-time">10:13</span>
                 </div>
-                <div className="col wa-msg wa-in wide">
+                <div className="wa-msg wa-in wide">
                   <span className="wa-name bot">/workspace</span>
                   <span>{t.wa.msg3}</span>
                   <span className="wa-time">10:16</span>
                 </div>
-                <div className="col wa-msg wa-in wide">
+                <div className="wa-msg wa-in wide">
                   <span className="wa-name bot">/workspace</span>
                   <span dangerouslySetInnerHTML={{ __html: t.wa.msg4Html }} />
                   <span className="wa-time">{t.wa.time4}</span>
                 </div>
-                <div className="col wa-msg wa-out">
+                <div className="wa-msg wa-out">
                   <span>{t.wa.msg5}</span>
                   <span className="wa-time">09:41</span>
                 </div>
@@ -199,90 +421,82 @@ export default async function Page({
           </div>
         </section>
 
-        {/* Pricing */}
-        <section id="pricing" className="pricing">
-          <div className="wrap row">
-            <div className="col pricing-copy">
-              <p className="eyebrow">{t.pricing.eyebrow}</p>
-              <h2 className="h2">{t.pricing.h2}</h2>
-              <p className="lead">{t.pricing.lead}</p>
-              <p className="muted">{t.pricing.muted1}</p>
-              <p className="muted">{t.pricing.muted2}</p>
-            </div>
-            <div className="col plan">
-              <div className="col" style={{ gap: 6 }}>
-                <p className="plan-name">{t.pricing.planName}</p>
-                <div className="plan-price">
-                  <span className="big">{t.pricing.price}</span>
-                  <span className="per">{t.pricing.per}</span>
-                </div>
-                <p className="plan-seat">{t.pricing.seat}</p>
+        <div className="wrap body-wrap">
+          {/* Diagram */}
+          <section id="overview" className="overview">
+            <Eyebrow>{t.overview.eyebrow}</Eyebrow>
+            <h2 className="h2">
+              {t.overview.h2Line1}
+              <br />
+              {t.overview.h2Line2}
+            </h2>
+            <figure className="diagram">
+              <div className="scroll">
+                <Diagram t={t.overview} />
               </div>
-              <ul className="col plan-list">
-                {t.pricing.items.map((item) => (
-                  <li key={item}>
-                    <span className="tick" aria-hidden="true">✓</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <a href="#waitlist" className="btn btn-primary">
-                {t.pricing.cta}
-              </a>
-              <p className="plan-fine">{t.pricing.fine}</p>
-            </div>
-          </div>
-        </section>
+              <figcaption>{t.overview.caption}</figcaption>
+            </figure>
+          </section>
 
-        {/* About */}
-        <section id="about" className="about">
-          <div className="wrap row">
-            <div className="col about-head">
-              <p className="eyebrow">{t.about.eyebrow}</p>
-              <h2 className="h2">{t.about.h2}</h2>
+          {/* About */}
+          <section id="about" className="about">
+            <div className="about-copy">
+              <Eyebrow>{t.about.eyebrow}</Eyebrow>
+              <h2 className="h2 h2--about">
+                {t.about.h2Line1}
+                <br />
+                {t.about.h2Line2}
+              </h2>
+              <p className="body">{t.about.p1}</p>
             </div>
-            <div className="col about-body">
-              <p>{t.about.p1}</p>
-              <p>{t.about.p2}</p>
-              <div className="row founders">
-                {t.about.founders.map((f) => (
-                  <div key={f.name} className="col founder">
-                    <p className="name">{f.name}</p>
-                    <p className="role">{f.role}</p>
-                  </div>
-                ))}
-              </div>
-              <p className="muted contact">
+            <div className="about-side">
+              {t.about.founders.map((f) => (
+                <div key={f.name}>
+                  <p className="name">{f.name}</p>
+                  <p className="role">{f.role}</p>
+                </div>
+              ))}
+              <p className="contact">
                 {t.about.contact}{" "}
-                <a href="mailto:lucas@slashworkspace.com">lucas@slashworkspace.com</a>
+                <a href="mailto:lucas@slashworkspace.com">
+                  lucas@slashworkspace.com
+                </a>
               </p>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
+      </main>
 
-        {/* Waiting list */}
-        <section id="waitlist" className="waitlist">
-          <div className="wrap row">
-            <div className="col wl-copy">
-              <p className="eyebrow">{t.waitlist.eyebrow}</p>
-              <h2 className="h2">{t.waitlist.h2}</h2>
+      {/* Waiting list + footer, dark */}
+      <footer id="waitlist" className="footer-dark">
+        <div className="band band--footer" aria-hidden="true" />
+        <div className="wrap body-wrap">
+          <div className="wl-row">
+            <div className="wl-copy">
+              <Eyebrow variant="dark">{t.waitlist.eyebrow}</Eyebrow>
+              <h2 className="h2 h2--wl">
+                {t.waitlist.h2Line1}
+                <br />
+                {t.waitlist.h2Line2}
+              </h2>
               <p className="lead">{t.waitlist.lead}</p>
+              <p className="wl-price">
+                <span className="tag">{t.waitlist.priceTag}</span>
+                <span>{t.waitlist.price}</span>
+              </p>
             </div>
             <WaitlistForm locale={locale} t={t.form} />
           </div>
-        </section>
-      </main>
-
-      <footer className="footer">
-        <div className="wrap row">
-          <div className="col footer-brand">
-            <Wordmark size={16} />
-            <span>{t.footer.copyright}</span>
+          <div className="footer-bar">
+            <a href="#top" className="wm">
+              <span className="slash">/</span>workspace
+            </a>
+            <a href="mailto:lucas@slashworkspace.com" className="mail">
+              lucas@slashworkspace.com
+            </a>
+            <p>{t.footer.copyright}</p>
+            <LanguageSwitcher current={locale} label={t.footer.language} />
           </div>
-          <div className="row footer-links">
-            <a href="mailto:lucas@slashworkspace.com">lucas@slashworkspace.com</a>
-          </div>
-          <LanguageSwitcher current={locale} label={t.footer.language} />
         </div>
       </footer>
     </>
