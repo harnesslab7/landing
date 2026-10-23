@@ -16,6 +16,8 @@ const en = {
     whatsapp: "WhatsApp",
     about: "About",
     cta: "Join the waiting list",
+    menuOpen: "Open menu",
+    menuClose: "Close menu",
   },
   hero: {
     kicker: "For small teams · In development",
@@ -171,6 +173,8 @@ const es: Dict = {
     whatsapp: "WhatsApp",
     about: "Sobre nosotros",
     cta: "Únete a la lista de espera",
+    menuOpen: "Abrir menú",
+    menuClose: "Cerrar menú",
   },
   hero: {
     kicker: "Para equipos pequeños · En desarrollo",
@@ -331,6 +335,8 @@ const pt: Dict = {
     whatsapp: "WhatsApp",
     about: "Sobre",
     cta: "Entrar na lista de espera",
+    menuOpen: "Abrir menu",
+    menuClose: "Fechar menu",
   },
   hero: {
     kicker: "Para equipes pequenas · Em desenvolvimento",
