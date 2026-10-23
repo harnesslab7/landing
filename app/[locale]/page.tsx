@@ -482,7 +482,7 @@ export default async function Page({
             <a href="mailto:lucas@slashworkspace.com" className="mail">
               lucas@slashworkspace.com
             </a>
-            <p>{t.footer.copyright}</p>
+            <p className="copy">{t.footer.copyright}</p>
             <LanguageSwitcher current={locale} label={t.footer.language} />
           </div>
         </div>
