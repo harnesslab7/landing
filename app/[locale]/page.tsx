@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import LanguageSwitcher from "../components/LanguageSwitcher";
+import SiteNav from "../components/SiteNav";
 import SyncDemo from "../components/SyncDemo";
 import WaitlistForm from "../components/WaitlistForm";
 import { FileIcon, FolderIcon, RouteIcon } from "../components/icons";
@@ -194,20 +195,7 @@ export default async function Page({
         <div className="band band--hero" aria-hidden="true" />
 
         <header className="masthead">
-          <nav className="wrap nav" aria-label="Main">
-            <a href="#top" className="wm">
-              <span className="slash">/</span>workspace
-            </a>
-            <div className="nav-links">
-              <a href="#shares">{t.nav.shares}</a>
-              <a href="#how">{t.nav.how}</a>
-              <a href="#whatsapp">{t.nav.whatsapp}</a>
-              <a href="#about">{t.nav.about}</a>
-              <a href="#waitlist" className="nav-cta">
-                {t.nav.cta}
-              </a>
-            </div>
-          </nav>
+          <SiteNav t={t.nav} />
         </header>
 
         <div className="wrap hero">
