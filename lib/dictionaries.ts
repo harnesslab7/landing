@@ -20,7 +20,7 @@ const en = {
     menuClose: "Close menu",
   },
   hero: {
-    kicker: "For small teams · In development",
+    kicker: "Work among different AI tools",
     h1Line1: "Your business",
     h1Line2: "in every AI tool,",
     h1Accent: "in real time.",
@@ -31,7 +31,7 @@ const en = {
     note: "Not open yet. Teams are onboarded in order.",
   },
   shares: {
-    eyebrow: "What your team shares",
+    eyebrow: "Your business in one place",
     h2Line1: "Everything your team knows.",
     h2Line2: "Shared.",
     lead: "Set it up once. Every AI tool on the team uses it.",
@@ -177,7 +177,7 @@ const es: Dict = {
     menuClose: "Cerrar menú",
   },
   hero: {
-    kicker: "Para equipos pequeños · En desarrollo",
+    kicker: "Trabaja entre distintas herramientas de IA",
     h1Line1: "Tu negocio",
     h1Line2: "en cada herramienta de IA,",
     h1Accent: "en tiempo real.",
@@ -188,7 +188,7 @@ const es: Dict = {
     note: "Todavía no está abierto. Incorporamos equipos en orden.",
   },
   shares: {
-    eyebrow: "Lo que tu equipo comparte",
+    eyebrow: "Tu negocio en un solo lugar",
     h2Line1: "Todo lo que tu equipo sabe.",
     h2Line2: "Compartido.",
     lead: "Configúralo una vez. Todas las IA del equipo lo usan.",
@@ -339,7 +339,7 @@ const pt: Dict = {
     menuClose: "Fechar menu",
   },
   hero: {
-    kicker: "Para equipes pequenas · Em desenvolvimento",
+    kicker: "Trabalhe entre diferentes ferramentas de IA",
     h1Line1: "O seu negócio",
     h1Line2: "em cada ferramenta de IA,",
     h1Accent: "em tempo real.",
@@ -350,7 +350,7 @@ const pt: Dict = {
     note: "Ainda não está aberto. Integramos equipes em ordem.",
   },
   shares: {
-    eyebrow: "O que a sua equipe compartilha",
+    eyebrow: "O seu negócio em um só lugar",
     h2Line1: "Tudo o que a sua equipe sabe.",
     h2Line2: "Compartilhado.",
     lead: "Configure uma vez. Toda IA da equipe usa.",
