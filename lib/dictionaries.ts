@@ -20,7 +20,7 @@ const en = {
     menuClose: "Close menu",
   },
   hero: {
-    kicker: "Work among different AI tools",
+    kicker: "Integrate with all AIs",
     h1Line1: "Your business",
     h1Line2: "in every AI,",
     h1Accent: "in real time.",
@@ -177,7 +177,7 @@ const es: Dict = {
     menuClose: "Cerrar menú",
   },
   hero: {
-    kicker: "Trabaja entre distintas herramientas de IA",
+    kicker: "Integra todas las IA",
     h1Line1: "Tu negocio",
     h1Line2: "en cada IA,",
     h1Accent: "en tiempo real.",
@@ -339,7 +339,7 @@ const pt: Dict = {
     menuClose: "Fechar menu",
   },
   hero: {
-    kicker: "Trabalhe entre diferentes ferramentas de IA",
+    kicker: "Integre com todas as IAs",
     h1Line1: "O seu negócio",
     h1Line2: "em cada IA,",
     h1Accent: "em tempo real.",
