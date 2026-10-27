@@ -123,8 +123,8 @@ const en = {
   },
   about: {
     eyebrow: "About",
-    h2Line1: "Built by a small team,",
-    h2Line2: "for small teams.",
+    h2Line1: "Born from a real problem,",
+    h2Line2: "tested in a real business.",
     p1: "/workspace started with a family real estate business where three people used three different AI accounts and none of them knew what the others had decided. The first version is being built with that team as the pilot.",
     founders: [
       { name: "Lucas Schnoller", role: "Founder, Brasil" },
@@ -287,8 +287,8 @@ const es: Dict = {
   },
   about: {
     eyebrow: "Sobre nosotros",
-    h2Line1: "Hecho por un equipo pequeño,",
-    h2Line2: "para equipos pequeños.",
+    h2Line1: "Nacido de un problema real,",
+    h2Line2: "probado en un negocio real.",
     p1: "/workspace nació en una inmobiliaria familiar donde tres personas usaban tres cuentas de IA distintas y ninguna sabía qué habían decidido las otras. La primera versión se está construyendo con ese equipo como piloto.",
     founders: [
       { name: "Lucas Schnoller", role: "Fundador, Brasil" },
@@ -449,8 +449,8 @@ const pt: Dict = {
   },
   about: {
     eyebrow: "Sobre",
-    h2Line1: "Feito por uma equipe pequena,",
-    h2Line2: "para equipes pequenas.",
+    h2Line1: "Nascido de um problema real,",
+    h2Line2: "testado em um negócio real.",
     p1: "O /workspace começou em uma imobiliária familiar onde três pessoas usavam três contas de IA diferentes e nenhuma sabia o que as outras tinham decidido. A primeira versão está sendo construída com essa equipe como piloto.",
     founders: [
       { name: "Lucas Schnoller", role: "Fundador, Brasil" },
