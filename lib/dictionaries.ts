@@ -8,7 +8,7 @@ const en = {
     title: "workspace",
     description:
       "Your clients, prices, rules and decisions, the same for everyone on your team, in Claude, ChatGPT and Gemini. Change something once and every chat knows it.",
-    ogDescription: "Your business in every AI tool, in real time.",
+    ogDescription: "Your business in every AI, in real time.",
   },
   nav: {
     shares: "What you share",
@@ -22,7 +22,7 @@ const en = {
   hero: {
     kicker: "Work among different AI tools",
     h1Line1: "Your business",
-    h1Line2: "in every AI tool,",
+    h1Line2: "in every AI,",
     h1Accent: "in real time.",
     toolsAria: "Works in",
     lead: "Your clients, prices, rules and decisions, the same for everyone on your team. Change something once and every chat knows it.",
@@ -134,7 +134,7 @@ const en = {
   },
   waitlist: {
     eyebrow: "Waiting list",
-    h2Line1: "Your business in every AI tool.",
+    h2Line1: "Your business in every AI.",
     h2Line2: "In real time.",
     lead: "Not open yet. We onboard teams in order from this list. No payment, no account.",
     priceTag: "At launch",
@@ -165,7 +165,7 @@ const es: Dict = {
     title: "workspace",
     description:
       "Tus clientes, precios, reglas y decisiones, iguales para todo tu equipo, en Claude, ChatGPT y Gemini. Cambia algo una vez y todos los chats lo saben.",
-    ogDescription: "Tu negocio en cada herramienta de IA, en tiempo real.",
+    ogDescription: "Tu negocio en cada IA, en tiempo real.",
   },
   nav: {
     shares: "Lo que compartes",
@@ -179,7 +179,7 @@ const es: Dict = {
   hero: {
     kicker: "Trabaja entre distintas herramientas de IA",
     h1Line1: "Tu negocio",
-    h1Line2: "en cada herramienta de IA,",
+    h1Line2: "en cada IA,",
     h1Accent: "en tiempo real.",
     toolsAria: "Funciona en",
     lead: "Tus clientes, precios, reglas y decisiones, iguales para todos en tu equipo. Cambia algo una vez y cada chat lo sabe.",
@@ -298,7 +298,7 @@ const es: Dict = {
   },
   waitlist: {
     eyebrow: "Lista de espera",
-    h2Line1: "Tu negocio en cada herramienta de IA.",
+    h2Line1: "Tu negocio en cada IA.",
     h2Line2: "En tiempo real.",
     lead: "Todavía no está abierto. Incorporamos equipos en orden desde esta lista. Sin pagos, sin cuenta.",
     priceTag: "Al lanzamiento",
@@ -327,7 +327,7 @@ const pt: Dict = {
     title: "workspace",
     description:
       "Seus clientes, preços, regras e decisões, iguais para toda a equipe, no Claude, ChatGPT e Gemini. Mude algo uma vez e todos os chats ficam sabendo.",
-    ogDescription: "O seu negócio em cada ferramenta de IA, em tempo real.",
+    ogDescription: "O seu negócio em cada IA, em tempo real.",
   },
   nav: {
     shares: "O que você compartilha",
@@ -341,7 +341,7 @@ const pt: Dict = {
   hero: {
     kicker: "Trabalhe entre diferentes ferramentas de IA",
     h1Line1: "O seu negócio",
-    h1Line2: "em cada ferramenta de IA,",
+    h1Line2: "em cada IA,",
     h1Accent: "em tempo real.",
     toolsAria: "Funciona em",
     lead: "Seus clientes, preços, regras e decisões, iguais para todos na sua equipe. Mude algo uma vez e todo chat fica sabendo.",
@@ -460,7 +460,7 @@ const pt: Dict = {
   },
   waitlist: {
     eyebrow: "Lista de espera",
-    h2Line1: "O seu negócio em cada ferramenta de IA.",
+    h2Line1: "O seu negócio em cada IA.",
     h2Line2: "Em tempo real.",
     lead: "Ainda não está aberto. Integramos equipes em ordem a partir desta lista. Sem pagamento, sem conta.",
     priceTag: "No lançamento",
