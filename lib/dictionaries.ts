@@ -7,7 +7,7 @@ const en = {
   meta: {
     title: "workspace",
     description:
-      "Your clients, prices, rules and decisions, the same for everyone on your team, in Claude, ChatGPT and Gemini. Change something once and every chat knows it.",
+      "Your clients, prices, rules and decisions, the same for everyone on your team, in Claude, ChatGPT and Gemini. Change something once and every AI knows it.",
     ogDescription: "Your business in every AI, in real time.",
   },
   nav: {
@@ -25,7 +25,7 @@ const en = {
     h1Line2: "in every AI,",
     h1Accent: "in real time.",
     toolsAria: "Works in",
-    lead: "Your clients, prices, rules and decisions, the same for everyone on your team. Change something once and every chat knows it.",
+    lead: "Your clients, prices, rules and decisions, the same for everyone on your team. Change something once and every AI knows it.",
     sub: "Each person keeps their own subscription.",
     cta: "Join the waiting list",
     note: "Not open yet. Teams are onboarded in order.",
@@ -182,7 +182,7 @@ const es: Dict = {
     h1Line2: "en cada IA,",
     h1Accent: "en tiempo real.",
     toolsAria: "Funciona en",
-    lead: "Tus clientes, precios, reglas y decisiones, iguales para todos en tu equipo. Cambia algo una vez y cada chat lo sabe.",
+    lead: "Tus clientes, precios, reglas y decisiones, iguales para todos en tu equipo. Cambia algo una vez y cada IA lo sabe.",
     sub: "Cada persona mantiene su propia suscripción.",
     cta: "Únete a la lista de espera",
     note: "Todavía no está abierto. Incorporamos equipos en orden.",
@@ -344,7 +344,7 @@ const pt: Dict = {
     h1Line2: "em cada IA,",
     h1Accent: "em tempo real.",
     toolsAria: "Funciona em",
-    lead: "Seus clientes, preços, regras e decisões, iguais para todos na sua equipe. Mude algo uma vez e todo chat fica sabendo.",
+    lead: "Seus clientes, preços, regras e decisões, iguais para todos na sua equipe. Mude algo uma vez e toda IA fica sabendo.",
     sub: "Cada pessoa mantém a própria assinatura.",
     cta: "Entrar na lista de espera",
     note: "Ainda não está aberto. Integramos equipes em ordem.",
