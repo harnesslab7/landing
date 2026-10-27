@@ -5,7 +5,7 @@ import type { Locale } from "./i18n";
 
 const en = {
   meta: {
-    title: "/workspace, your business in every AI tool",
+    title: "Slash Workspace",
     description:
       "Your clients, prices, rules and decisions, the same for everyone on your team, in Claude, ChatGPT and Gemini. Change something once and every chat knows it.",
     ogDescription: "Your business in every AI tool, in real time.",
@@ -162,7 +162,7 @@ export type Dict = typeof en;
 
 const es: Dict = {
   meta: {
-    title: "/workspace, tu negocio en cada herramienta de IA",
+    title: "Slash Workspace",
     description:
       "Tus clientes, precios, reglas y decisiones, iguales para todo tu equipo, en Claude, ChatGPT y Gemini. Cambia algo una vez y todos los chats lo saben.",
     ogDescription: "Tu negocio en cada herramienta de IA, en tiempo real.",
@@ -324,7 +324,7 @@ const es: Dict = {
 
 const pt: Dict = {
   meta: {
-    title: "/workspace, o seu negócio em cada ferramenta de IA",
+    title: "Slash Workspace",
     description:
       "Seus clientes, preços, regras e decisões, iguais para toda a equipe, no Claude, ChatGPT e Gemini. Mude algo uma vez e todos os chats ficam sabendo.",
     ogDescription: "O seu negócio em cada ferramenta de IA, em tempo real.",
