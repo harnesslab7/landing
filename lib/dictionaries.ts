@@ -8,7 +8,7 @@ const en = {
     title: "workspace",
     description:
       "Your clients, prices, rules and decisions, the same for everyone on your team, in Claude, ChatGPT and Gemini. Change something once and every chat knows it.",
-    ogDescription: "Your business in every AI tool, in real time.",
+    ogDescription: "Your business in every AI, in real time.",
   },
   nav: {
     shares: "What you share",
@@ -20,9 +20,9 @@ const en = {
     menuClose: "Close menu",
   },
   hero: {
-    kicker: "For small teams · In development",
+    kicker: "Work among different AI tools",
     h1Line1: "Your business",
-    h1Line2: "in every AI tool,",
+    h1Line2: "in every AI,",
     h1Accent: "in real time.",
     toolsAria: "Works in",
     lead: "Your clients, prices, rules and decisions, the same for everyone on your team. Change something once and every chat knows it.",
@@ -31,7 +31,7 @@ const en = {
     note: "Not open yet. Teams are onboarded in order.",
   },
   shares: {
-    eyebrow: "What your team shares",
+    eyebrow: "Your business in one place",
     h2Line1: "Everything your team knows.",
     h2Line2: "Shared.",
     lead: "Set it up once. Every AI tool on the team uses it.",
@@ -123,8 +123,8 @@ const en = {
   },
   about: {
     eyebrow: "About",
-    h2Line1: "Built by a small team,",
-    h2Line2: "for small teams.",
+    h2Line1: "Born from a real problem,",
+    h2Line2: "tested in a real business.",
     p1: "/workspace started with a family real estate business where three people used three different AI accounts and none of them knew what the others had decided. The first version is being built with that team as the pilot.",
     founders: [
       { name: "Lucas Schnoller", role: "Founder, Brasil" },
@@ -134,7 +134,7 @@ const en = {
   },
   waitlist: {
     eyebrow: "Waiting list",
-    h2Line1: "Your business in every AI tool.",
+    h2Line1: "Your business in every AI.",
     h2Line2: "In real time.",
     lead: "Not open yet. We onboard teams in order from this list. No payment, no account.",
     priceTag: "At launch",
@@ -165,7 +165,7 @@ const es: Dict = {
     title: "workspace",
     description:
       "Tus clientes, precios, reglas y decisiones, iguales para todo tu equipo, en Claude, ChatGPT y Gemini. Cambia algo una vez y todos los chats lo saben.",
-    ogDescription: "Tu negocio en cada herramienta de IA, en tiempo real.",
+    ogDescription: "Tu negocio en cada IA, en tiempo real.",
   },
   nav: {
     shares: "Lo que compartes",
@@ -177,9 +177,9 @@ const es: Dict = {
     menuClose: "Cerrar menú",
   },
   hero: {
-    kicker: "Para equipos pequeños · En desarrollo",
+    kicker: "Trabaja entre distintas herramientas de IA",
     h1Line1: "Tu negocio",
-    h1Line2: "en cada herramienta de IA,",
+    h1Line2: "en cada IA,",
     h1Accent: "en tiempo real.",
     toolsAria: "Funciona en",
     lead: "Tus clientes, precios, reglas y decisiones, iguales para todos en tu equipo. Cambia algo una vez y cada chat lo sabe.",
@@ -188,7 +188,7 @@ const es: Dict = {
     note: "Todavía no está abierto. Incorporamos equipos en orden.",
   },
   shares: {
-    eyebrow: "Lo que tu equipo comparte",
+    eyebrow: "Tu negocio en un solo lugar",
     h2Line1: "Todo lo que tu equipo sabe.",
     h2Line2: "Compartido.",
     lead: "Configúralo una vez. Todas las IA del equipo lo usan.",
@@ -287,8 +287,8 @@ const es: Dict = {
   },
   about: {
     eyebrow: "Sobre nosotros",
-    h2Line1: "Hecho por un equipo pequeño,",
-    h2Line2: "para equipos pequeños.",
+    h2Line1: "Nacido de un problema real,",
+    h2Line2: "probado en un negocio real.",
     p1: "/workspace nació en una inmobiliaria familiar donde tres personas usaban tres cuentas de IA distintas y ninguna sabía qué habían decidido las otras. La primera versión se está construyendo con ese equipo como piloto.",
     founders: [
       { name: "Lucas Schnoller", role: "Fundador, Brasil" },
@@ -298,7 +298,7 @@ const es: Dict = {
   },
   waitlist: {
     eyebrow: "Lista de espera",
-    h2Line1: "Tu negocio en cada herramienta de IA.",
+    h2Line1: "Tu negocio en cada IA.",
     h2Line2: "En tiempo real.",
     lead: "Todavía no está abierto. Incorporamos equipos en orden desde esta lista. Sin pagos, sin cuenta.",
     priceTag: "Al lanzamiento",
@@ -327,7 +327,7 @@ const pt: Dict = {
     title: "workspace",
     description:
       "Seus clientes, preços, regras e decisões, iguais para toda a equipe, no Claude, ChatGPT e Gemini. Mude algo uma vez e todos os chats ficam sabendo.",
-    ogDescription: "O seu negócio em cada ferramenta de IA, em tempo real.",
+    ogDescription: "O seu negócio em cada IA, em tempo real.",
   },
   nav: {
     shares: "O que você compartilha",
@@ -339,9 +339,9 @@ const pt: Dict = {
     menuClose: "Fechar menu",
   },
   hero: {
-    kicker: "Para equipes pequenas · Em desenvolvimento",
+    kicker: "Trabalhe entre diferentes ferramentas de IA",
     h1Line1: "O seu negócio",
-    h1Line2: "em cada ferramenta de IA,",
+    h1Line2: "em cada IA,",
     h1Accent: "em tempo real.",
     toolsAria: "Funciona em",
     lead: "Seus clientes, preços, regras e decisões, iguais para todos na sua equipe. Mude algo uma vez e todo chat fica sabendo.",
@@ -350,7 +350,7 @@ const pt: Dict = {
     note: "Ainda não está aberto. Integramos equipes em ordem.",
   },
   shares: {
-    eyebrow: "O que a sua equipe compartilha",
+    eyebrow: "O seu negócio em um só lugar",
     h2Line1: "Tudo o que a sua equipe sabe.",
     h2Line2: "Compartilhado.",
     lead: "Configure uma vez. Toda IA da equipe usa.",
@@ -449,8 +449,8 @@ const pt: Dict = {
   },
   about: {
     eyebrow: "Sobre",
-    h2Line1: "Feito por uma equipe pequena,",
-    h2Line2: "para equipes pequenas.",
+    h2Line1: "Nascido de um problema real,",
+    h2Line2: "testado em um negócio real.",
     p1: "O /workspace começou em uma imobiliária familiar onde três pessoas usavam três contas de IA diferentes e nenhuma sabia o que as outras tinham decidido. A primeira versão está sendo construída com essa equipe como piloto.",
     founders: [
       { name: "Lucas Schnoller", role: "Fundador, Brasil" },
@@ -460,7 +460,7 @@ const pt: Dict = {
   },
   waitlist: {
     eyebrow: "Lista de espera",
-    h2Line1: "O seu negócio em cada ferramenta de IA.",
+    h2Line1: "O seu negócio em cada IA.",
     h2Line2: "Em tempo real.",
     lead: "Ainda não está aberto. Integramos equipes em ordem a partir desta lista. Sem pagamento, sem conta.",
     priceTag: "No lançamento",

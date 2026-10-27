@@ -61,6 +61,17 @@ input,
 button {
   font: inherit;
 }
+/* Avoid single words stranded on their own line */
+h1,
+h2,
+h3,
+.eyebrow {
+  text-wrap: balance;
+}
+p,
+li {
+  text-wrap: pretty;
+}
 code {
   font-family: var(--mono);
   font-weight: 600;
@@ -1441,6 +1452,9 @@ a.btn-accent:hover {
   .h2--about,
   .h2--wl {
     font-size: clamp(32px, 8vw, 42px);
+  }
+  .hero h1 {
+    font-size: clamp(42px, 13vw, 50px);
   }
   .about-side {
     border-left: 0;
