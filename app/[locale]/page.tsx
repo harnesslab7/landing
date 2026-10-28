@@ -3,7 +3,7 @@ import LanguageSwitcher from "../components/LanguageSwitcher";
 import SiteNav from "../components/SiteNav";
 import SyncDemo from "../components/SyncDemo";
 import WaitlistForm from "../components/WaitlistForm";
-import { FileIcon, FolderIcon, RouteIcon } from "../components/icons";
+import { FolderIcon, RouteIcon } from "../components/icons";
 import { getDictionary, type Dict } from "../../lib/dictionaries";
 import { isLocale } from "../../lib/i18n";
 
@@ -249,23 +249,33 @@ export default async function Page({
             <p className="section-lead">{t.shares.lead}</p>
 
             <div className="cards">
-              {/* Your drive */}
+              {/* Your shared files */}
               <article className="card">
                 <div className="card-art">
                   <div className="card-band" aria-hidden="true" />
                   <p className="card-label">{t.shares.drive.label}</p>
-                  <p className="card-row">
-                    <FileIcon />
-                    {t.shares.drive.files[0]}
-                  </p>
-                  <p className="card-row">
-                    <FolderIcon />
-                    {t.shares.drive.files[1]}
-                  </p>
-                  <p className="card-row">
-                    <FileIcon />
-                    {t.shares.drive.files[2]}
-                  </p>
+                  <div className="file-list">
+                    <p className="file-head">
+                      <span className="grow">{t.shares.drive.colName}</span>
+                      <span>{t.shares.drive.colModified}</span>
+                    </p>
+                    {t.shares.drive.files.map((file) => (
+                      <p key={file.name} className="file-row">
+                        {file.type === "folder" ? (
+                          <FolderIcon />
+                        ) : (
+                          <span
+                            className={`file-type file-type--${file.type}`}
+                            aria-hidden="true"
+                          >
+                            {file.type}
+                          </span>
+                        )}
+                        <span className="grow">{file.name}</span>
+                        <span className="meta">{file.modified}</span>
+                      </p>
+                    ))}
+                  </div>
                 </div>
                 <div className="card-text">
                   <h3>{t.shares.drive.title}</h3>
@@ -292,26 +302,6 @@ export default async function Page({
                 </div>
               </article>
 
-              {/* Scheduled tasks */}
-              <article className="card">
-                <div className="card-art card-art--row">
-                  <div className="card-band" aria-hidden="true" />
-                  <div className="cal" aria-hidden="true">
-                    <span className="cal-badge">{t.shares.scheduled.calBadge}</span>
-                    <span className="cal-day">{t.shares.scheduled.calDay}</span>
-                  </div>
-                  <div className="sched-info">
-                    <p className="name">{t.shares.scheduled.taskName}</p>
-                    <p className="desc">{t.shares.scheduled.taskDesc}</p>
-                    <p className="target">{t.shares.scheduled.taskTarget}</p>
-                  </div>
-                </div>
-                <div className="card-text">
-                  <h3>{t.shares.scheduled.title}</h3>
-                  <p>{t.shares.scheduled.body}</p>
-                </div>
-              </article>
-
               {/* Experts */}
               <article className="card">
                 <div className="card-art">
@@ -332,6 +322,26 @@ export default async function Page({
                 <div className="card-text">
                   <h3>{t.shares.experts.title}</h3>
                   <p>{t.shares.experts.body}</p>
+                </div>
+              </article>
+
+              {/* Scheduled tasks */}
+              <article className="card">
+                <div className="card-art card-art--row">
+                  <div className="card-band" aria-hidden="true" />
+                  <div className="cal" aria-hidden="true">
+                    <span className="cal-badge">{t.shares.scheduled.calBadge}</span>
+                    <span className="cal-day">{t.shares.scheduled.calDay}</span>
+                  </div>
+                  <div className="sched-info">
+                    <p className="name">{t.shares.scheduled.taskName}</p>
+                    <p className="desc">{t.shares.scheduled.taskDesc}</p>
+                    <p className="target">{t.shares.scheduled.taskTarget}</p>
+                  </div>
+                </div>
+                <div className="card-text">
+                  <h3>{t.shares.scheduled.title}</h3>
+                  <p>{t.shares.scheduled.body}</p>
                 </div>
               </article>
             </div>

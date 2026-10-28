@@ -32,13 +32,19 @@ const en = {
   },
   shares: {
     eyebrow: "Your business in one place",
-    h2Line1: "Everything your team knows.",
-    h2Line2: "Shared.",
+    h2Line1: "Your business AI in one place.",
+    h2Line2: "Share it everywhere.",
     lead: "Set it up once. Every AI tool on the team uses it.",
     drive: {
       label: "Google Drive · OneDrive",
-      files: ["Price list 2026.xlsx", "Client contracts", "Onboarding deck.pdf"],
-      title: "Your drive",
+      colName: "Name",
+      colModified: "Modified",
+      files: [
+        { name: "Price list 2026.xlsx", type: "xls", modified: "2h ago" },
+        { name: "Client contracts", type: "folder", modified: "Yesterday" },
+        { name: "Onboarding deck.pdf", type: "pdf", modified: "Oct 12" },
+      ],
+      title: "Your shared files",
       body: "Your Google Drive or OneDrive files, read by every AI.",
     },
     workflows: {
@@ -189,17 +195,19 @@ const es: Dict = {
   },
   shares: {
     eyebrow: "Tu negocio en un solo lugar",
-    h2Line1: "Todo lo que tu equipo sabe.",
-    h2Line2: "Compartido.",
+    h2Line1: "La IA de tu negocio en un solo lugar.",
+    h2Line2: "Compártela en todas partes.",
     lead: "Configúralo una vez. Todas las IA del equipo lo usan.",
     drive: {
       label: "Google Drive · OneDrive",
+      colName: "Nombre",
+      colModified: "Modificado",
       files: [
-        "Lista de precios 2026.xlsx",
-        "Contratos de clientes",
-        "Deck de onboarding.pdf",
+        { name: "Lista de precios 2026.xlsx", type: "xls", modified: "Hace 2 h" },
+        { name: "Contratos de clientes", type: "folder", modified: "Ayer" },
+        { name: "Deck de onboarding.pdf", type: "pdf", modified: "12 oct" },
       ],
-      title: "Tu drive",
+      title: "Tus archivos compartidos",
       body: "Tus archivos de Google Drive o OneDrive, leídos por todas las IA.",
     },
     workflows: {
@@ -351,17 +359,19 @@ const pt: Dict = {
   },
   shares: {
     eyebrow: "O seu negócio em um só lugar",
-    h2Line1: "Tudo o que a sua equipe sabe.",
-    h2Line2: "Compartilhado.",
+    h2Line1: "A IA do seu negócio em um só lugar.",
+    h2Line2: "Compartilhe em todo lugar.",
     lead: "Configure uma vez. Toda IA da equipe usa.",
     drive: {
       label: "Google Drive · OneDrive",
+      colName: "Nome",
+      colModified: "Modificado",
       files: [
-        "Lista de preços 2026.xlsx",
-        "Contratos de clientes",
-        "Deck de onboarding.pdf",
+        { name: "Lista de preços 2026.xlsx", type: "xls", modified: "Há 2 h" },
+        { name: "Contratos de clientes", type: "folder", modified: "Ontem" },
+        { name: "Deck de onboarding.pdf", type: "pdf", modified: "12 out" },
       ],
-      title: "Seu drive",
+      title: "Seus arquivos compartilhados",
       body: "Seus arquivos do Google Drive ou OneDrive, lidos por todas as IA.",
     },
     workflows: {
