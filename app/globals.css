@@ -444,12 +444,21 @@ a.btn-accent:hover {
 }
 .cards {
   margin-top: 36px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
 }
+@media (max-width: 1100px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 .card {
-  flex: 1 1 250px;
   min-width: 0;
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -515,6 +524,71 @@ a.btn-accent:hover {
 .card-row .meta {
   font-size: 12px;
   color: var(--dark-label);
+}
+.file-list {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+}
+.file-head,
+.file-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.file-head {
+  padding: 0 2px 6px;
+  border-bottom: 1px solid var(--dark-line);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--dark-label);
+}
+.file-row {
+  padding: 9px 2px;
+  border-bottom: 1px solid var(--dark-line-2);
+  color: var(--dark-chip-ink);
+  font-size: 14px;
+}
+.file-row:last-child {
+  border-bottom: 0;
+}
+.file-head .grow,
+.file-row .grow {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.file-row .meta {
+  flex: none;
+  font-size: 12px;
+  color: var(--dark-label);
+}
+.file-row svg.mi {
+  width: 20px;
+  height: 20px;
+  color: var(--accent);
+}
+.file-type {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.file-type--xls {
+  background: #1d8a52;
+}
+.file-type--pdf {
+  background: #d9433b;
 }
 .cal {
   width: 78px;

@@ -3,7 +3,7 @@ import LanguageSwitcher from "../components/LanguageSwitcher";
 import SiteNav from "../components/SiteNav";
 import SyncDemo from "../components/SyncDemo";
 import WaitlistForm from "../components/WaitlistForm";
-import { FileIcon, FolderIcon, RouteIcon } from "../components/icons";
+import { FolderIcon, RouteIcon } from "../components/icons";
 import { getDictionary, type Dict } from "../../lib/dictionaries";
 import { isLocale } from "../../lib/i18n";
 
@@ -59,16 +59,16 @@ function Diagram({ t }: { t: Dict["overview"] }) {
         {t.lblTools}
       </text>
       <g className="connector" markerStart="url(#fa)" markerEnd="url(#fa)">
-        <path d="M272 72H305C365 72 325 168 390 168H448" />
-        <path d="M272 152H305C365 152 325 184 390 184H448" />
-        <path d="M272 232H305C365 232 325 200 390 200H448" />
-        <path d="M272 312H305C365 312 325 216 390 216H448" />
-        <path d="M752 176H794C867 176 844 112 914 112H948" />
-        <path d="M752 192H948" />
-        <path d="M752 208H794C867 208 844 272 914 272H948" />
+        <path d="M352 72H370C415 72 390 168 435 168H478" />
+        <path d="M352 152H370C415 152 390 184 435 184H478" />
+        <path d="M352 232H370C415 232 390 200 435 200H478" />
+        <path d="M352 312H370C415 312 390 216 435 216H478" />
+        <path d="M782 176H814C877 176 854 112 914 112H948" />
+        <path d="M782 192H948" />
+        <path d="M782 208H814C877 208 854 272 914 272H948" />
       </g>
       <g className="connector" markerStart="url(#fa)">
-        <path d="M600 246V400" />
+        <path d="M630 246V400" />
       </g>
       <g className="connector">
         <path d="M360 400H840" />
@@ -79,10 +79,10 @@ function Diagram({ t }: { t: Dict["overview"] }) {
         <path d="M840 400V450" />
       </g>
 
-      <rect className="node" x="0" y="40" width="270" height="64" rx="6" />
-      <rect className="node" x="0" y="120" width="270" height="64" rx="6" />
-      <rect className="node" x="0" y="200" width="270" height="64" rx="6" />
-      <rect className="node" x="0" y="280" width="270" height="64" rx="6" />
+      <rect className="node" x="0" y="40" width="350" height="64" rx="6" />
+      <rect className="node" x="0" y="120" width="350" height="64" rx="6" />
+      <rect className="node" x="0" y="200" width="350" height="64" rx="6" />
+      <rect className="node" x="0" y="280" width="350" height="64" rx="6" />
       <g className="dgic" transform="translate(20 52) scale(1.667)">
         <path d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2" />
       </g>
@@ -113,11 +113,11 @@ function Diagram({ t }: { t: Dict["overview"] }) {
         {t.nodeExperts}
       </text>
 
-      <rect className="node" x="450" y="140" width="300" height="104" rx="7" />
-      <text className="bslash" x="489" y="212">
+      <rect className="node" x="480" y="140" width="300" height="104" rx="7" />
+      <text className="bslash" x="519" y="212">
         /
       </text>
-      <text className="brand" x="520" y="204">
+      <text className="brand" x="550" y="204">
         workspace
       </text>
 
@@ -146,7 +146,7 @@ function Diagram({ t }: { t: Dict["overview"] }) {
         @ws
       </text>
 
-      <text className="lbl" x="614" y="330">
+      <text className="lbl" x="644" y="330">
         {t.lblIntegrations}
       </text>
       <rect className="node" x="250" y="452" width="220" height="64" rx="6" />
@@ -249,23 +249,33 @@ export default async function Page({
             <p className="section-lead">{t.shares.lead}</p>
 
             <div className="cards">
-              {/* Your drive */}
+              {/* Your shared files */}
               <article className="card">
                 <div className="card-art">
                   <div className="card-band" aria-hidden="true" />
                   <p className="card-label">{t.shares.drive.label}</p>
-                  <p className="card-row">
-                    <FileIcon />
-                    {t.shares.drive.files[0]}
-                  </p>
-                  <p className="card-row">
-                    <FolderIcon />
-                    {t.shares.drive.files[1]}
-                  </p>
-                  <p className="card-row">
-                    <FileIcon />
-                    {t.shares.drive.files[2]}
-                  </p>
+                  <div className="file-list">
+                    <p className="file-head">
+                      <span className="grow">{t.shares.drive.colName}</span>
+                      <span>{t.shares.drive.colModified}</span>
+                    </p>
+                    {t.shares.drive.files.map((file) => (
+                      <p key={file.name} className="file-row">
+                        {file.type === "folder" ? (
+                          <FolderIcon />
+                        ) : (
+                          <span
+                            className={`file-type file-type--${file.type}`}
+                            aria-hidden="true"
+                          >
+                            {file.type}
+                          </span>
+                        )}
+                        <span className="grow">{file.name}</span>
+                        <span className="meta">{file.modified}</span>
+                      </p>
+                    ))}
+                  </div>
                 </div>
                 <div className="card-text">
                   <h3>{t.shares.drive.title}</h3>
@@ -292,26 +302,6 @@ export default async function Page({
                 </div>
               </article>
 
-              {/* Scheduled tasks */}
-              <article className="card">
-                <div className="card-art card-art--row">
-                  <div className="card-band" aria-hidden="true" />
-                  <div className="cal" aria-hidden="true">
-                    <span className="cal-badge">{t.shares.scheduled.calBadge}</span>
-                    <span className="cal-day">{t.shares.scheduled.calDay}</span>
-                  </div>
-                  <div className="sched-info">
-                    <p className="name">{t.shares.scheduled.taskName}</p>
-                    <p className="desc">{t.shares.scheduled.taskDesc}</p>
-                    <p className="target">{t.shares.scheduled.taskTarget}</p>
-                  </div>
-                </div>
-                <div className="card-text">
-                  <h3>{t.shares.scheduled.title}</h3>
-                  <p>{t.shares.scheduled.body}</p>
-                </div>
-              </article>
-
               {/* Experts */}
               <article className="card">
                 <div className="card-art">
@@ -332,6 +322,26 @@ export default async function Page({
                 <div className="card-text">
                   <h3>{t.shares.experts.title}</h3>
                   <p>{t.shares.experts.body}</p>
+                </div>
+              </article>
+
+              {/* Scheduled tasks */}
+              <article className="card">
+                <div className="card-art card-art--row">
+                  <div className="card-band" aria-hidden="true" />
+                  <div className="cal" aria-hidden="true">
+                    <span className="cal-badge">{t.shares.scheduled.calBadge}</span>
+                    <span className="cal-day">{t.shares.scheduled.calDay}</span>
+                  </div>
+                  <div className="sched-info">
+                    <p className="name">{t.shares.scheduled.taskName}</p>
+                    <p className="desc">{t.shares.scheduled.taskDesc}</p>
+                    <p className="target">{t.shares.scheduled.taskTarget}</p>
+                  </div>
+                </div>
+                <div className="card-text">
+                  <h3>{t.shares.scheduled.title}</h3>
+                  <p>{t.shares.scheduled.body}</p>
                 </div>
               </article>
             </div>
