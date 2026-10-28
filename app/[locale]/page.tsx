@@ -59,16 +59,16 @@ function Diagram({ t }: { t: Dict["overview"] }) {
         {t.lblTools}
       </text>
       <g className="connector" markerStart="url(#fa)" markerEnd="url(#fa)">
-        <path d="M272 72H305C365 72 325 168 390 168H448" />
-        <path d="M272 152H305C365 152 325 184 390 184H448" />
-        <path d="M272 232H305C365 232 325 200 390 200H448" />
-        <path d="M272 312H305C365 312 325 216 390 216H448" />
-        <path d="M752 176H794C867 176 844 112 914 112H948" />
-        <path d="M752 192H948" />
-        <path d="M752 208H794C867 208 844 272 914 272H948" />
+        <path d="M352 72H370C415 72 390 168 435 168H478" />
+        <path d="M352 152H370C415 152 390 184 435 184H478" />
+        <path d="M352 232H370C415 232 390 200 435 200H478" />
+        <path d="M352 312H370C415 312 390 216 435 216H478" />
+        <path d="M782 176H814C877 176 854 112 914 112H948" />
+        <path d="M782 192H948" />
+        <path d="M782 208H814C877 208 854 272 914 272H948" />
       </g>
       <g className="connector" markerStart="url(#fa)">
-        <path d="M600 246V400" />
+        <path d="M630 246V400" />
       </g>
       <g className="connector">
         <path d="M360 400H840" />
@@ -79,10 +79,10 @@ function Diagram({ t }: { t: Dict["overview"] }) {
         <path d="M840 400V450" />
       </g>
 
-      <rect className="node" x="0" y="40" width="270" height="64" rx="6" />
-      <rect className="node" x="0" y="120" width="270" height="64" rx="6" />
-      <rect className="node" x="0" y="200" width="270" height="64" rx="6" />
-      <rect className="node" x="0" y="280" width="270" height="64" rx="6" />
+      <rect className="node" x="0" y="40" width="350" height="64" rx="6" />
+      <rect className="node" x="0" y="120" width="350" height="64" rx="6" />
+      <rect className="node" x="0" y="200" width="350" height="64" rx="6" />
+      <rect className="node" x="0" y="280" width="350" height="64" rx="6" />
       <g className="dgic" transform="translate(20 52) scale(1.667)">
         <path d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2" />
       </g>
@@ -113,11 +113,11 @@ function Diagram({ t }: { t: Dict["overview"] }) {
         {t.nodeExperts}
       </text>
 
-      <rect className="node" x="450" y="140" width="300" height="104" rx="7" />
-      <text className="bslash" x="489" y="212">
+      <rect className="node" x="480" y="140" width="300" height="104" rx="7" />
+      <text className="bslash" x="519" y="212">
         /
       </text>
-      <text className="brand" x="520" y="204">
+      <text className="brand" x="550" y="204">
         workspace
       </text>
 
@@ -146,7 +146,7 @@ function Diagram({ t }: { t: Dict["overview"] }) {
         @ws
       </text>
 
-      <text className="lbl" x="614" y="330">
+      <text className="lbl" x="644" y="330">
         {t.lblIntegrations}
       </text>
       <rect className="node" x="250" y="452" width="220" height="64" rx="6" />
