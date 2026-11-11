@@ -22,7 +22,7 @@ const en = {
   hero: {
     kicker: "Your whole team's AI, integrated",
     h1Line1: "One place",
-    h1Line2: "to manage the AI",
+    h1Line2: "to manage AI",
     h1Accent: "for your business.",
     toolsAria: "Works in",
     lead: "Your clients, prices, rules and decisions, the same for everyone on your team. Someone changes something and every AI knows it.",
