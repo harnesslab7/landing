@@ -20,12 +20,12 @@ const en = {
     menuClose: "Close menu",
   },
   hero: {
-    kicker: "Integrate with all AIs",
-    h1Line1: "Your business",
-    h1Line2: "in every AI,",
-    h1Accent: "in real time.",
+    kicker: "Your whole team's AI, integrated",
+    h1Line1: "One place",
+    h1Line2: "to manage the AI",
+    h1Accent: "for your business.",
     toolsAria: "Works in",
-    lead: "Your clients, prices, rules and decisions, the same for everyone on your team. Change something once and every AI knows it.",
+    lead: "Your clients, prices, rules and decisions, the same for everyone on your team. Someone changes something and every AI knows it.",
     sub: "Each person keeps their own subscription.",
     cta: "Join the waiting list",
     note: "Not open yet. Teams are onboarded in order.",
@@ -34,7 +34,7 @@ const en = {
     eyebrow: "Central AI management",
     h2Line1: "Your business AI in one place.",
     h2Line2: "Share it everywhere.",
-    lead: "Set it up once. Every AI tool on the team uses it.",
+    lead: "Set it up in one place and every AI on the team sees it.",
     drive: {
       label: "Google Drive · OneDrive",
       colName: "Name",
@@ -79,8 +79,8 @@ const en = {
   },
   how: {
     eyebrow: "How it works",
-    h2Line1: "Change it once.",
-    h2Line2: "Every AI tool knows it.",
+    h2Line1: "Your AI session is",
+    h2Line2: "reflected across the whole team.",
     lead: "Anyone on the team can add a rule, a price or a decision from their own chat. Everyone else's AI uses it from that moment on.",
     figureAria: "Example: a rule set in Claude is applied in ChatGPT a minute later",
     step1Title: "Lucas sets a rule in Claude",
@@ -97,7 +97,7 @@ const en = {
   },
   wa: {
     label: "WhatsApp integration",
-    h2: "Works inside the group your team already has.",
+    h2: "Add the workspace agent to your team's WhatsApp group.",
     leadHtml:
       "/workspace joins as one more participant. What the team agrees there is shared, <code>@ws</code> gets an answer in the group, and scheduled tasks post their results where everyone talks.",
     phoneAria: "Example of a WhatsApp group with /workspace as a member",
@@ -113,8 +113,7 @@ const en = {
   },
   overview: {
     eyebrow: "How it fits together",
-    h2Line1: "One place in the middle.",
-    h2Line2: "Your team around it.",
+    h2: "Control your AI from one central place.",
     diagramAria:
       "Your drive, workflows, scheduled tasks and experts live in /workspace. Claude, ChatGPT and Gemini use it. WhatsApp, Slack and Google Meet feed it.",
     lblShares: "WHAT YOUR TEAM SHARES",
@@ -183,12 +182,12 @@ const es: Dict = {
     menuClose: "Cerrar menú",
   },
   hero: {
-    kicker: "Integra todas las IA",
-    h1Line1: "Tu negocio",
-    h1Line2: "en cada IA,",
-    h1Accent: "en tiempo real.",
+    kicker: "La IA de todo tu equipo integrada",
+    h1Line1: "Un solo lugar",
+    h1Line2: "para manejar la IA",
+    h1Accent: "de tu negocio.",
     toolsAria: "Funciona en",
-    lead: "Tus clientes, precios, reglas y decisiones, iguales para todos en tu equipo. Cambia algo una vez y cada IA lo sabe.",
+    lead: "Tus clientes, precios, reglas y decisiones, iguales para todos en tu equipo. Alguien cambia algo y todas las IAs lo saben.",
     sub: "Cada persona mantiene su propia suscripción.",
     cta: "Únete a la lista de espera",
     note: "Todavía no está abierto. Incorporamos equipos en orden.",
@@ -197,7 +196,7 @@ const es: Dict = {
     eyebrow: "Gestión central de IA",
     h2Line1: "La IA de tu negocio en un solo lugar.",
     h2Line2: "Compártela en todas partes.",
-    lead: "Configúralo una vez. Todas las IA del equipo lo usan.",
+    lead: "Se configura en un lugar y todas las IA del equipo lo ven.",
     drive: {
       label: "Google Drive · OneDrive",
       colName: "Nombre",
@@ -242,8 +241,8 @@ const es: Dict = {
   },
   how: {
     eyebrow: "Cómo funciona",
-    h2Line1: "Cámbialo una vez.",
-    h2Line2: "Todas las IA lo saben.",
+    h2Line1: "Tu sesión con IA se ve",
+    h2Line2: "reflejada en todo el equipo.",
     lead: "Cualquiera en el equipo puede agregar una regla, un precio o una decisión desde su propio chat. La IA de todos los demás la usa desde ese momento.",
     figureAria:
       "Ejemplo: una regla definida en Claude se aplica en ChatGPT un minuto después",
@@ -263,7 +262,7 @@ const es: Dict = {
   },
   wa: {
     label: "Integración con WhatsApp",
-    h2: "Funciona dentro del grupo que tu equipo ya tiene.",
+    h2: "Agrega el agente de workspace al grupo de whatsapp de tu equipo.",
     leadHtml:
       "/workspace se une como un participante más. Lo que el equipo acuerda ahí se comparte, <code>@ws</code> recibe una respuesta en el grupo y las tareas programadas publican sus resultados donde hablan todos.",
     phoneAria: "Ejemplo de un grupo de WhatsApp con /workspace como miembro",
@@ -279,8 +278,7 @@ const es: Dict = {
   },
   overview: {
     eyebrow: "Cómo encaja todo",
-    h2Line1: "Un lugar en el medio.",
-    h2Line2: "Tu equipo alrededor.",
+    h2: "Controla tu IA desde un lugar central.",
     diagramAria:
       "Tu drive, los flujos de trabajo, las tareas programadas y los expertos viven en /workspace. Claude, ChatGPT y Gemini lo usan. WhatsApp, Slack y Google Meet lo alimentan.",
     lblShares: "LO QUE TU EQUIPO COMPARTE",
@@ -347,12 +345,12 @@ const pt: Dict = {
     menuClose: "Fechar menu",
   },
   hero: {
-    kicker: "Integre com todas as IAs",
-    h1Line1: "O seu negócio",
-    h1Line2: "em cada IA,",
-    h1Accent: "em tempo real.",
+    kicker: "A IA de toda a sua equipe integrada",
+    h1Line1: "Um só lugar",
+    h1Line2: "para gerenciar a IA",
+    h1Accent: "do seu negócio.",
     toolsAria: "Funciona em",
-    lead: "Seus clientes, preços, regras e decisões, iguais para todos na sua equipe. Mude algo uma vez e toda IA fica sabendo.",
+    lead: "Seus clientes, preços, regras e decisões, iguais para todos na sua equipe. Alguém muda algo e todas as IAs ficam sabendo.",
     sub: "Cada pessoa mantém a própria assinatura.",
     cta: "Entrar na lista de espera",
     note: "Ainda não está aberto. Integramos equipes em ordem.",
@@ -361,7 +359,7 @@ const pt: Dict = {
     eyebrow: "Gestão central de IA",
     h2Line1: "A IA do seu negócio em um só lugar.",
     h2Line2: "Compartilhe em todo lugar.",
-    lead: "Configure uma vez. Toda IA da equipe usa.",
+    lead: "Você configura em um lugar e todas as IAs da equipe veem.",
     drive: {
       label: "Google Drive · OneDrive",
       colName: "Nome",
@@ -406,8 +404,8 @@ const pt: Dict = {
   },
   how: {
     eyebrow: "Como funciona",
-    h2Line1: "Mude uma vez.",
-    h2Line2: "Toda IA fica sabendo.",
+    h2Line1: "A sua sessão com IA fica",
+    h2Line2: "refletida em toda a equipe.",
     lead: "Qualquer pessoa da equipe pode adicionar uma regra, um preço ou uma decisão do próprio chat. A IA de todos os outros usa a partir desse momento.",
     figureAria:
       "Exemplo: uma regra definida no Claude é aplicada no ChatGPT um minuto depois",
@@ -427,7 +425,7 @@ const pt: Dict = {
   },
   wa: {
     label: "Integração com WhatsApp",
-    h2: "Funciona dentro do grupo que a sua equipe já tem.",
+    h2: "Adicione o agente do workspace ao grupo de WhatsApp da sua equipe.",
     leadHtml:
       "O /workspace entra como mais um participante. O que a equipe combina ali é compartilhado, <code>@ws</code> recebe resposta no grupo e as tarefas agendadas publicam os resultados onde todos conversam.",
     phoneAria: "Exemplo de um grupo de WhatsApp com o /workspace como membro",
@@ -443,8 +441,7 @@ const pt: Dict = {
   },
   overview: {
     eyebrow: "Como tudo se encaixa",
-    h2Line1: "Um lugar no meio.",
-    h2Line2: "Sua equipe em volta.",
+    h2: "Controle a sua IA a partir de um lugar central.",
     diagramAria:
       "Seu drive, os fluxos de trabalho, as tarefas agendadas e os especialistas vivem no /workspace. Claude, ChatGPT e Gemini usam. WhatsApp, Slack e Google Meet alimentam.",
     lblShares: "O QUE A SUA EQUIPE COMPARTILHA",
