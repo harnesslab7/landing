@@ -5,10 +5,11 @@ import type { Locale } from "./i18n";
 
 const en = {
   meta: {
-    title: "workspace",
+    title: "workspace | One place to manage AI for your team",
     description:
-      "Your clients, prices, rules and decisions, the same for everyone on your team, in Claude, ChatGPT and Gemini. Change something once and every AI knows it.",
-    ogDescription: "Your business in every AI, in real time.",
+      "Your clients, prices, rules and decisions, the same for everyone on your team, in Claude, ChatGPT and Gemini. Someone changes something and every AI knows it.",
+    ogDescription:
+      "Your clients, prices, rules and decisions, the same for everyone on your team. Someone changes something and every AI knows it.",
   },
   nav: {
     shares: "What you share",
@@ -167,10 +168,11 @@ export type Dict = typeof en;
 
 const es: Dict = {
   meta: {
-    title: "workspace",
+    title: "workspace | Un solo lugar para manejar la IA de tu equipo",
     description:
-      "Tus clientes, precios, reglas y decisiones, iguales para todo tu equipo, en Claude, ChatGPT y Gemini. Cambia algo una vez y todos los chats lo saben.",
-    ogDescription: "Tu negocio en cada IA, en tiempo real.",
+      "Tus clientes, precios, reglas y decisiones, iguales para todo tu equipo, en Claude, ChatGPT y Gemini. Alguien cambia algo y todas las IAs lo saben.",
+    ogDescription:
+      "Tus clientes, precios, reglas y decisiones, iguales para todos en tu equipo. Alguien cambia algo y todas las IAs lo saben.",
   },
   nav: {
     shares: "Lo que compartes",
@@ -330,10 +332,11 @@ const es: Dict = {
 
 const pt: Dict = {
   meta: {
-    title: "workspace",
+    title: "workspace | Um só lugar para gerenciar a IA da sua equipe",
     description:
-      "Seus clientes, preços, regras e decisões, iguais para toda a equipe, no Claude, ChatGPT e Gemini. Mude algo uma vez e todos os chats ficam sabendo.",
-    ogDescription: "O seu negócio em cada IA, em tempo real.",
+      "Seus clientes, preços, regras e decisões, iguais para toda a equipe, no Claude, ChatGPT e Gemini. Alguém muda algo e todas as IAs ficam sabendo.",
+    ogDescription:
+      "Seus clientes, preços, regras e decisões, iguais para todos na sua equipe. Alguém muda algo e todas as IAs ficam sabendo.",
   },
   nav: {
     shares: "O que você compartilha",
