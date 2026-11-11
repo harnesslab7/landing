@@ -346,18 +346,6 @@ export default async function Page({
               </article>
             </div>
           </section>
-
-          {/* How it works: live demo */}
-          <section id="how" className="how">
-            <Eyebrow>{t.how.eyebrow}</Eyebrow>
-            <h2 className="h2">
-              {t.how.h2Line1}
-              <br />
-              {t.how.h2Line2}
-            </h2>
-            <p className="section-lead">{t.how.lead}</p>
-            <SyncDemo t={t.how} />
-          </section>
         </div>
 
         {/* WhatsApp integration */}
@@ -423,11 +411,7 @@ export default async function Page({
           {/* Diagram */}
           <section id="overview" className="overview">
             <Eyebrow>{t.overview.eyebrow}</Eyebrow>
-            <h2 className="h2">
-              {t.overview.h2Line1}
-              <br />
-              {t.overview.h2Line2}
-            </h2>
+            <h2 className="h2">{t.overview.h2}</h2>
             <figure className="diagram">
               <div className="scroll">
                 <Diagram t={t.overview} />
@@ -435,7 +419,24 @@ export default async function Page({
               <figcaption>{t.overview.caption}</figcaption>
             </figure>
           </section>
+        </div>
 
+        {/* How it works: live demo, dark */}
+        <section id="how" className="how">
+          <div className="band band--how" aria-hidden="true" />
+          <div className="wrap">
+            <Eyebrow variant="dark">{t.how.eyebrow}</Eyebrow>
+            <h2 className="h2">
+              {t.how.h2Line1}
+              <br />
+              <span className="accent">{t.how.h2Line2}</span>
+            </h2>
+            <p className="section-lead">{t.how.lead}</p>
+            <SyncDemo t={t.how} />
+          </div>
+        </section>
+
+        <div className="wrap body-wrap">
           {/* About */}
           <section id="about" className="about">
             <div className="about-copy">
