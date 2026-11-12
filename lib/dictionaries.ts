@@ -134,7 +134,7 @@ const en = {
     p1: "Tato (Andrés Ponte) and Luke (Lucas Schnoller) are childhood friends. They recently connected over the same question: why do small and mid-sized businesses use AI individually? They created /workspace so that every team can be powered by a collective AI that knows all its members and processes.",
     founders: [
       { name: "Lucas Schnoller", role: "Founder, Brasil" },
-      { name: "Andres Ponte", role: "Co-founder, Argentina" },
+      { name: "Andrés Ponte", role: "Co-founder, Argentina" },
     ],
     contact: "Contact:",
   },
@@ -300,7 +300,7 @@ const es: Dict = {
     p1: "Tato (Andrés Ponte) y Luke (Lucas Schnoller) son amigos de la infancia. Recientemente se conectaron haciéndose la misma pregunta: ¿por qué las pymes usan la IA de forma individual? Crearon /workspace para que todos los equipos puedan ser potenciados por una IA colectiva, que conoce a todos sus miembros y procesos.",
     founders: [
       { name: "Lucas Schnoller", role: "Fundador, Brasil" },
-      { name: "Andres Ponte", role: "Cofundador, Argentina" },
+      { name: "Andrés Ponte", role: "Cofundador, Argentina" },
     ],
     contact: "Contacto:",
   },
@@ -464,7 +464,7 @@ const pt: Dict = {
     p1: "Tato (Andrés Ponte) e Luke (Lucas Schnoller) são amigos de infância. Recentemente se conectaram fazendo a mesma pergunta: por que as PMEs usam a IA de forma individual? Criaram o /workspace para que todas as equipes possam ser potencializadas por uma IA coletiva, que conhece todos os seus membros e processos.",
     founders: [
       { name: "Lucas Schnoller", role: "Fundador, Brasil" },
-      { name: "Andres Ponte", role: "Cofundador, Argentina" },
+      { name: "Andrés Ponte", role: "Cofundador, Argentina" },
     ],
     contact: "Contato:",
   },
