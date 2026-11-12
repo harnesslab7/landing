@@ -155,7 +155,7 @@ svg.mi {
 }
 .h2--about {
   margin-top: 16px;
-  font-size: 42px;
+  font-size: clamp(32px, 3vw, 36px);
 }
 .h2--wl {
   margin-top: 16px;
@@ -1542,7 +1542,6 @@ a.btn-accent:hover {
     padding-top: 48px;
     padding-bottom: 64px;
   }
-  .h2--about,
   .h2--wl {
     font-size: clamp(32px, 8vw, 42px);
   }
